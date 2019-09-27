@@ -12,14 +12,10 @@ jobs:
       packageType: 'sdk'
       version: 
   
-  
-
   - task: DotNetCoreCLI@2
     inputs:
-      command: 'custom'
-      custom: 'new'
-      arguments: '"Console Application"'
-
+      command: 'build'
+      projects: '$(build.sourcesDirectory)\\ViewEnvironment\\ViewEnvironment.csproj'
 
   - task: DotNetCoreCLI@2
     inputs:
