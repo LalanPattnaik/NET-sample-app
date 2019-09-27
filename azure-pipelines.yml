@@ -18,7 +18,7 @@ jobs:
     inputs:
       command: 'custom'
       custom: 'new'
-      arguments: 'Console Application'
+      arguments: '"Console Application"'
 
 
   - task: DotNetCoreCLI@2
