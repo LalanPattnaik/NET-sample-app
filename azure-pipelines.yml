@@ -11,15 +11,11 @@ jobs:
     inputs:
       packageType: 'sdk'
       version: 
-  
-  - task: DotNetCoreCLI@2
-    inputs:
-      command: 'build'
-      projects: '$(build.sourcesDirectory)\\ViewEnvironment\\ViewEnvironment.csproj'
 
   - task: DotNetCoreCLI@2
     inputs:
       command: 'custom'
+      projects: '/ViewEnvironment'
       custom: 'add'
       arguments: '$(build.sourcesDirectory) package Microsoft.CodeAnalysis.VersionCheckAnalyzer --version 2.9.4'
 
