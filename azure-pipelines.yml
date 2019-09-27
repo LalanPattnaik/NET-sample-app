@@ -12,11 +12,20 @@ jobs:
       packageType: 'sdk'
       version: 
   
+  
+
+  - task: DotNetCoreCLI@2
+    inputs:
+      command: 'custom'
+      custom: 'new'
+      arguments: 'Console Application'
+
+
   - task: DotNetCoreCLI@2
     inputs:
       command: 'custom'
       custom: 'add'
-      arguments: '$(build.sourcesDirectory)\\ViewEnvironment\\ViewEnvironment.csproj package Microsoft.CodeAnalysis.VersionCheckAnalyzer --version 2.9.4'
+      arguments: '$(build.sourcesDirectory) package Microsoft.CodeAnalysis.VersionCheckAnalyzer --version 2.9.4'
 
   - task: DotNetCoreCLI@2
     inputs:
