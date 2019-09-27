@@ -16,7 +16,7 @@ jobs:
     inputs:
       command: 'custom'
       custom: 'add'
-      arguments: '$(build.sourcesDirectory)\ViewEnvironment package Microsoft.CodeAnalysis.VersionCheckAnalyzer --version 2.9.4'
+      arguments: '$(build.sourcesDirectory)/ViewEnvironment package Microsoft.CodeAnalysis.VersionCheckAnalyzer --version 2.9.4'
 
   - task: DotNetCoreCLI@2
     inputs:
