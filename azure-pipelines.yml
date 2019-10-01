@@ -14,15 +14,14 @@ jobs:
 
   - task: DotNetCoreCLI@2
     inputs:
-      command: 'custom'
-      custom: 'new'
-      arguments: '"Console Applicaiton"'
+      command: 'build'
+      projects: 'D:\\a\\1\\s\\ViewEnvironment\\'
 
   - task: DotNetCoreCLI@2
     inputs:
       command: 'custom'
       custom: 'add'
-      arguments: '$(build.sourcesDirectory) package Microsoft.CodeAnalysis.VersionCheckAnalyzer --version 2.9.4'
+      arguments: '$(build.sourcesDirectory)\\ViewEnvironment package Microsoft.CodeAnalysis.VersionCheckAnalyzer --version 2.9.4'
 
   - task: DotNetCoreCLI@2
     inputs:
